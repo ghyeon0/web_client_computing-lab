@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Transform Basic</title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <script src="prefixfree.min.js"></script>
+</head>
+<body>
+    <script>
+        function printName(id){
+            let buf = document.getElementById("sel");
+            switch (id){
+                case "1": buf.innerHTML = "1.png"; break;
+                case "2": buf.innerHTML = "2.png"; break;
+                case "3": buf.innerHTML = "3.png"; break;
+                case "4": buf.innerHTML = "4.jpg"; break;
+                case "5": buf.innerHTML = "5.png"; break;
+                case "6": buf.innerHTML = "6.png"; break;
+            }
+        }
+    </script>
+    <section>
+        <div id="1" onclick="printName(id)"></div>
+        <div id="2" onclick="printName(id)"></div>
+        <div id="3" onclick="printName(id)"></div>
+        <div id="4" onclick="printName(id)"></div>
+        <div id="5" onclick="printName(id)"></div>
+        <div id="6" onclick="printName(id)"></div>
+    </section>
+    <br><br><br><br>
+    <span><label id="sel"></label></span>
+</body>
+</html>

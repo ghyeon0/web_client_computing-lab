@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab4-3</title>
+</head>
+<body>
+    <script>
+        function playorpause(tag){
+            let vid = document.getElementById("vd");
+            if (tag == "pause"){
+                vid.pause();
+            }else{
+                vid.play();
+            }
+        }
+        function changeFileName(obj){
+            let vid = document.getElementById("vd");
+            let f = document.getElementById("file");
+            let filename = f.value.split("\\")[2];
+            vid.src = filename;
+            document.getElementById("sel").innerHTML = filename + "이 선택되었습니다.";
+        }
+    </script>
+
+    <h2>Video Player</h2>
+    <span>영상선택 : <label id="sel" for="file"> </label> </span> <br>
+    <input type="file" name="file" id="file" value="file" onchange="changeFileName()"/>
+    <input type="button" value="영상보기" id="play" onclick="playorpause(id)"/>
+    <input type="button" value="영상중단" id="pause" onclick="playorpause(id)"/><br>
+    <video width="960" controls="controls" id="vd" src="wildlife.mp4"></video><br>
+
+</body>
+</html>
